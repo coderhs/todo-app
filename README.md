@@ -1,9 +1,7 @@
-== Welcome to Rails
+This is a todo-application I build part of IEEE Student Quality Improvement Program, 2013
 
-This is a todo-application I build part of IEEE Student Quality Improvement Program, 2013.
+> disclaimer 
 
-disclaimer 
-----------
 Build for educational/learning purpose not meant for production use. 
 
 
