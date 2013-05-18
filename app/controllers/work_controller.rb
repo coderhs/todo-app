@@ -5,7 +5,7 @@ class WorkController < ApplicationController
 
   def index
     @tasks_completed = Task.where(completed:true)
-    @tasks_incomplete = Task.where(completed:nil)
+    @tasks_incomplete = Task.where(completed:false)
   end
 
   def create
