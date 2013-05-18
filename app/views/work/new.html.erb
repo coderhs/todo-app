@@ -1,0 +1,6 @@
+<%= form_for @task, url: work_create_path, id:"new_task" do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+  <br>
+  <%= f.submit "Save", :class => "btn btn-primary" %>
+<% end %>

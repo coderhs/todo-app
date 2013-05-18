@@ -1,0 +1,13 @@
+<tr>
+<%= form_for @task, url:work_update_path do |f| %>
+  <td>
+    <%= hidden_field_tag :id, @task.id %>
+    <% if !@task.completed %>
+      <%= link_to "<i class='icon-ok'></i>".html_safe, work_update_path(id:@task.id), id: "new_link", remote:true %>
+    <% else %>
+      <i class='icon-glass'></i>
+    <% end %>
+  </td>
+  <td><%= @task.task%></td>
+<% end %>
+</tr>

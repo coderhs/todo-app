@@ -1,6 +1,14 @@
 Todo::Application.routes.draw do
 
-  root to: 'site#home'
+  get "work/new"
+
+  get "work/index"
+
+  post "work/create"
+
+  get "work/update"
+
+  root to: 'work#index'
   get '/about', to: 'site#about'
   get "/download", to: 'site#download'
   get "/contact", to: 'site#contact'

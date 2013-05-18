@@ -1,0 +1,43 @@
+<%= link_to "New Task", work_new_path, id: "new_link", :class => 'btn btn-success',remote:true %>
+
+<br>
+
+<h1>To be Done</h1>
+<table class="table table-striped", id="incomplete-task">
+  <thead>
+    <tr>
+      <th>Completed?</th>
+      <th>Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks_incomplete.each do |task| %>
+      <tr id="table-element_<%= task.id %>">
+        <%= form_for task, url:work_update_path, remote:true do |f| %>
+          <td>
+          <%= hidden_field_tag :id, task.id %>
+<%= link_to "<i class='icon-ok'></i>".html_safe, work_update_path(id:task.id), id: "new_link", remote:true %>
+          </td>
+          <td><%= task.task%></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h1>Completed</h1>
+<table class="table table-bordered" id="complete-task">
+  <thead>
+    <tr>
+      <th>Completed?</th>
+      <th>Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks_completed.each do |task| %>
+      <tr>
+        <td><i class='icon-glass'></i></td>
+        <td><%=task.task%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
